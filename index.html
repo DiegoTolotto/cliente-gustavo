@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LuxeRide | Premium Chauffeur Services for Weddings & VIP Events</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: '#C7A447',
+                        midnight: '#0D1B2A',
+                        jet: '#000000',
+                    },
+                    fontFamily: {
+                        heading: ['Cormorant Garamond', 'serif'],
+                        body: ['Lato', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        .gold-gradient {
+            background: linear-gradient(90deg, rgba(199,164,71,0.8) 0%, rgba(199,164,71,0.2) 100%);
+        }
+        .testimonial-card:hover .testimonial-quote {
+            transform: scale(1.05);
+            opacity: 1;
+        }
+        .car-card:hover img {
+            transform: scale(1.03);
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .nav-link::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #C7A447;
+            transition: width .3s;
+        }
+        .whatsapp-float {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(199, 164, 71, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(199, 164, 71, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(199, 164, 71, 0);
+            }
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/5511999999999?text=Hello!%20I'm%20planning%20a%20[wedding/event/transfer]%20on%20[date]%20in%20[city]%20and%20would%20like%20a%20quote." 
+       class="fixed bottom-8 right-8 bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center text-3xl z-50 shadow-xl whatsapp-float hover:bg-green-600 transition-all duration-300">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Header -->
+    <header class="fixed w-full z-40 transition-all duration-500" id="header">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="#" class="text-2xl font-heading font-bold text-gold">Luxe<span class="text-white">Ride</span></a>
+                
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#" class="text-white hover:text-gold nav-link transition-all duration-300">Início</a>
+                    <a href="#services" class="text-white hover:text-gold nav-link transition-all duration-300">Serviços</a>
+                    <a href="#weddings" class="text-white hover:text-gold nav-link transition-all duration-300">Casamentos</a>
+                    <a href="#fleet" class="text-white hover:text-gold nav-link transition-all duration-300">Frota</a>
+                    <a href="#about" class="text-white hover:text-gold nav-link transition-all duration-300">Sobre</a>
+                    <a href="#contact" class="text-white hover:text-gold nav-link transition-all duration-300">Contato</a>
+                </nav>
+                
+                <div class="md:hidden">
+                    <button class="text-white focus:outline-none" id="menu-btn">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="hidden bg-midnight w-full absolute left-0 top-full py-4 px-6" id="mobile-menu">
+            <div class="flex flex-col space-y-4">
+                <a href="#" class="text-white hover:text-gold">Início</a>
+                <a href="#services" class="text-white hover:text-gold">Serviços</a>
+                <a href="#weddings" class="text-white hover:text-gold">Casamentos</a>
+                <a href="#fleet" class="text-white hover:text-gold">Frota</a>
+                <a href="#about" class="text-white hover:text-gold">Sobre</a>
+                <a href="#contact" class="text-white hover:text-gold">Contato</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <video autoplay muted loop class="hero-video">
+            <source src="https://assets.mixkit.co/videos/35540/35540-720.mp4" type="video/mp4">
+            Seu navegador não suporta o elemento de vídeo.
+        </video>
+        
+        <div class="container mx-auto px-6 z-10 text-center">
+            <h1 class="text-4xl md:text-6xl font-heading font-bold text-white mb-6 animate-fade-in">
+                Não é apenas um transporte — <span class="text-gold">É uma grande entrada</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-white mb-10 max-w-3xl mx-auto">
+                Experiências de motorista de luxo para casamentos inesquecíveis, eventos de elite e distinção corporativa.
+            </p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="https://wa.me/5511999999999?text=Olá!%20Estou%20planejando%20um%20[casamento/evento/translado]%20em%20[data]%20em%20[cidade]%20e%20gostaria%20de%20um%20orçamento." 
+                   class="bg-gold hover:bg-gold-700 text-white font-bold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105">
+                    Reservar via WhatsApp
+                </a>
+                <a href="#fleet" class="bg-transparent border-2 border-white hover:border-gold text-white hover:text-gold font-bold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105">
+                    Ver nossa frota para casamentos
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Casamentos -->
+    <section id="weddings" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-heading font-bold text-center text-midnight mb-16">
+                <span class="border-b-2 border-gold pb-2">Serviço de Motorista para Casamentos</span>
+            </h2>
+            
+            <!-- Bloco 1 -->
+            <div class="flex flex-col md:flex-row items-center mb-20">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <img src="https://images.unsplash.com/flagged/photo-1620830102229-9db5c00d4afc?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                         alt="Noiva em Rolls-Royce" class="w-full h-auto rounded-lg shadow-xl">
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl md:text-3xl font-heading font-bold text-midnight mb-6">Pensado para o Seu Grande Dia</h3>
+                    <p class="text-lg text-gray-700 mb-6">
+                        Nossos veículos não são apenas transporte — fazem parte da sua história. Personalizados para combinar com sua paleta de cores, decoração e cronograma. Coordenamos com sua assessoria para garantir que cada detalhe esteja alinhado com sua visão.
+                    </p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <span class="text-gold mr-3 mt-1"><i class="fas fa-check-circle"></i></span>
+                            <span class="text-gray-700">Fitas personalizadas para combinar com o tema</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-gold mr-3 mt-1"><i class="fas fa-check-circle"></i></span>
+                            <span class="text-gray-700">Motoristas profissionais treinados em etiqueta para casamentos</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-gold mr-3 mt-1"><i class="fas fa-check-circle"></i></span>
+                            <span class="text-gray-700">Pontualidade nas chegadas para cerimônia e recepção</span>
+                        </li>
+                    </ul>
+                    <a href="https://wa.me/5511999999999?text=Olá!%20Estou%20planejando%20um%20casamento%20em%20[data]%20em%20[cidade]%20e%20gostaria%20de%20um%20orçamento." 
+                       class="inline-block bg-gold hover:bg-gold-700 text-white font-bold py-3 px-6 rounded-full transition-all duration-300 transform hover:scale-105">
+                        Consultar Disponibilidade para Casamento
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Bloco 2 -->
+            <div class="flex flex-col md:flex-row-reverse items-center mb-20">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pl-10">
+                    <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Casal se beijando ao lado do carro ao pôr do sol" class="w-full h-auto rounded-lg shadow-xl">
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl md:text-3xl font-heading font-bold text-midnight mb-6">Momentos Fotográficos Incríveis</h3>
+                    <p class="text-lg text-gray-700 mb-6">
+                        Cada detalhe, desde a colocação das fitas até o serviço de porta, é pensado para seus registros inesquecíveis. Nossos motoristas são treinados para ajudar nos melhores cliques de saída e conhecem todos os melhores ângulos para suas fotos.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 mb-8">
+                        <div class="bg-gray-100 p-4 rounded-lg">
+                            <div class="text-gold mb-2"><i class="fas fa-camera-retro text-2xl"></i></div>
+                            <h4 class="font-bold text-midnight mb-1">Chegada</h4>
+                            <p class="text-sm text-gray-600">Fotos de entrada impactantes</p>
+                        </div>
+                        <div class="bg-gray-100 p-4 rounded-lg">
+                            <div class="text-gold mb-2"><i class="fas fa-glass-cheers text-2xl"></i></div>
+                            <h4 class="font-bold text-midnight mb-1">Brinde de Champagne</h4>
+                            <p class="text-sm text-gray-600">Momentos de celebração no veículo</p>
+                        </div>
+                        <div class="bg-gray-100 p-4 rounded-lg">
+                            <div class="text-gold mb-2"><i class="fas fa-door-open text-2xl"></i></div>
+                            <h4 class="font-bold text-midnight mb-1">Saída Triunfal</h4>
+                            <p class="text-sm text-gray-600">Fotos perfeitas de despedida</p>
+                        </div>
+                        <div class="bg-gray-100 p-4 rounded-lg">
+                            <div class="text-gold mb-2"><i class="fas fa-heart text-2xl"></i></div>
+                            <h4 class="font-bold text-midnight mb-1">Retratos Românticos</h4>
+                            <p class="text-sm text-gray-600">Fotos do casal com o carro</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Bloco 3 -->
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <img src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Limusine em frente ao local do casamento" class="w-full h-auto rounded-lg shadow-xl">
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl md:text-3xl font-heading font-bold text-midnight mb-6">Pacotes Personalizados para Cerimônia e Festa</h3>
+                    <p class="text-lg text-gray-700 mb-6">
+                        Do embarque antes da cerimônia à saída dos noivos, nossa equipe cuida de cada etapa. Oferecemos pacotes flexíveis que podem incluir:
+                    </p>
+                    <div class="mb-8">
+                        <div class="flex items-start mb-4">
+                            <div class="bg-gold rounded-full p-2 mr-4">
+                                <i class="fas fa-car text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-midnight">Transporte do Cortejo</h4>
+                                <p class="text-gray-600">Chegue junto com quem você ama e em grande estilo</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start mb-4">
+                            <div class="bg-gold rounded-full p-2 mr-4">
+                                <i class="fas fa-ring text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-midnight">Da Cerimônia à Festa</h4>
+                                <p class="text-gray-600">Transição perfeita entre os locais</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-gold rounded-full p-2 mr-4">
+                                <i class="fas fa-moon text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-midnight">Saída Privativa</h4>
+                                <p class="text-gray-600">Despedida exclusiva após a festa</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-gray-100 p-6 rounded-lg mb-6">
+                        <h4 class="font-bold text-midnight mb-2">Serviços Premium Opcionais</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-white text-gold px-3 py-1 rounded-full text-sm">Serviço de Champagne</span>
+                            <span class="bg-white text-gold px-3 py-1 rounded-full text-sm">Arranjos Florais</span>
+                            <span class="bg-white text-gold px-3 py-1 rounded-full text-sm">Tapete Vermelho</span>
+                            <span class="bg-white text-gold px-3 py-1 rounded-full text-sm">Canhão de Confete</span>
+                            <span class="bg-white text-gold px-3 py-1 rounded-full text-sm">Assistente de Fotos</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Executiva & Eventos -->
+    <section id="services" class="py-20 bg-midnight text-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-heading font-bold text-center text-gold mb-4">
+                Serviços Executivos & Eventos
+            </h2>
+            <p class="text-xl text-center text-gray-300 mb-16 max-w-3xl mx-auto">
+                A experiência dos seus convidados começa no momento da chegada. Nossos veículos criam a primeira impressão certa — poderosa, elegante, inesquecível.
+            </p>
+            
+            <div class="grid md:grid-cols-3 gap-10 mb-16">
+                <div class="bg-jet p-8 rounded-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="text-gold text-4xl mb-6">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <h3 class="text-2xl font-heading font-bold mb-4">Traslados Aeroporto</h3>
+                    <p class="text-gray-300 mb-6">
+                        Para convidados C-level que exigem serviço pontual e discreto de terminais privados ou aeroportos comerciais.
+                    </p>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <span class="text-gold mr-2 mt-1"><i class="fas fa-check"></i></span>
+                            <span>Monitoramento de voos para chegadas pontuais</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-gold mr-2 mt-1"><i class="fas fa-check"></i></span>
+                            <span>Recepção com placa de identificação</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-gold mr-2 mt-1"><i class="fas fa-check"></i></span>
+                            <span>Wi-Fi & estrutura de escritório móvel</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-jet p-8 rounded-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="text-gold text-4xl mb-6">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3 class="text-2xl font-heading font-bold mb-4">Gala & Tapete Vermelho</h3>
+                    <p class="text-gray-300 mb-6">
+                        Presença de luxo discreta para eventos de alto padrão onde a chegada faz toda a diferença.
+                    </p>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <span class="text-gold mr-2 mt-1"><i class="fas fa-check"></i></span>
+                            <span>Coordenação com segurança do evento</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-gold mr-2 mt-1"><i class="fas fa-check"></i></span>
+                            <span>Gestão do tempo de chegada para imprensa</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-gold mr-2 mt-1"><i class="fas fa-check"></i></span>
+                            <span>Opções de veículos secundários discretos</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-jet p-8 rounded-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="text-gold text-4xl mb-6">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <h3 class="text-2xl font-heading font-bold mb-4">Veículos para Produção</h3>
+                    <p class="text-gray-300 mb-6">
+                        Para sets de filmagem, comerciais e ensaios que exigem veículos de luxo com flexibilidade operacional.
+                    </p>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <span class="text-gold mr-2 mt-1"><i class="fas fa-check"></i></span>
+                            <span>Longos períodos de espera para gravações</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-gold mr-2 mt-1"><i class="fas fa-check"></i></span>
+                            <span>Motorista flexível para múltiplas tomadas</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-gold mr-2 mt-1"><i class="fas fa-check"></i></span>
+                            <span>Configurações especiais de iluminação</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <div class="inline-flex flex-col sm:flex-row gap-4">
+                    <a href="#fleet" class="bg-gold hover:bg-gold-700 text-white font-bold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105">
+                        Ver Frota para Eventos
+                    </a>
+                    <a href="https://wa.me/5511999999999?text=Olá!%20Estou%20planejando%20um%20evento%20em%20[data]%20em%20[cidade]%20e%20gostaria%20de%20um%20orçamento." 
+                       class="bg-transparent border-2 border-gold text-gold hover:bg-gold hover:text-white font-bold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105">
+                        Reservar via WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeria da Frota -->
+    <section id="fleet" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-heading font-bold text-center text-midnight mb-4">
+                Nossa Frota de Luxo
+            </h2>
+            <p class="text-xl text-center text-gray-600 mb-12 max-w-3xl mx-auto">
+                Veículos cuidadosamente selecionados para cada ocasião, mantidos com os mais altos padrões de luxo e desempenho.
+            </p>
+            
+            <!-- Filtros da Frota -->
+            <div class="flex flex-wrap justify-center gap-3 mb-12">
+                <button class="px-6 py-2 rounded-full bg-gold text-white font-bold fleet-filter active" data-filter="all">Todos os Veículos</button>
+                <button class="px-6 py-2 rounded-full border border-gray-300 hover:bg-gold hover:text-white font-bold fleet-filter" data-filter="wedding">Casamentos</button>
+                <button class="px-6 py-2 rounded-full border border-gray-300 hover:bg-gold hover:text-white font-bold fleet-filter" data-filter="executive">Executivo</button>
+                <button class="px-6 py-2 rounded-full border border-gray-300 hover:bg-gold hover:text-white font-bold fleet-filter" data-filter="event">Eventos</button>
+                <button class="px-6 py-2 rounded-full border border-gray-300 hover:bg-gold hover:text-white font-bold fleet-filter" data-filter="production">Produção</button>
+            </div>
+            
+            <!-- Grade da Frota -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Veículo 1 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg car-card wedding" data-category="wedding">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                             alt="Rolls-Royce Phantom Carro de Casamento" class="w-full h-full object-cover transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
+                        <div class="absolute bottom-0 left-0 p-6 text-white">
+                            <span class="bg-gold text-xs font-bold px-3 py-1 rounded-full mb-2 inline-block">Favorito dos Noivos</span>
+                            <h3 class="text-2xl font-heading font-bold">Rolls-Royce Phantom</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <span class="text-gray-600"><i class="fas fa-users text-gold mr-2"></i> 4 passageiros</span>
+                            </div>
+                            <div class="text-gold font-bold text-xl">A partir de R$ 800</div>
+                        </div>
+                        <p class="text-gray-700 mb-4">
+                            O clássico para recepções black tie. Inclui frigobar para champagne, teto estrelado e portas coach para saídas dramáticas.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="bg-gray-100 text-gray-800 text-xs px-3 py-1 rounded-full">Laços Artesanais</span>
+                            <span class="bg-gray-100 text-gray-800 text-xs px-3 py-1 rounded-full">Serviço de Champagne</span>
+                            <span class="bg-gray-100 text-gray-800 text-xs px-3 py-1 rounded-full">Tapete Vermelho</span>
+                        </div>
+                        <a href="https://wa.me/5511999999999?text=Olá!%20Tenho%20interesse%20no%20Rolls-Royce%20Phantom%20para%20meu%20evento%20em%20[data]." 
+                           class="block text-center bg-gold hover:bg-gold-700 text-white font-bold py-3 px-6 rounded-full transition-all duration-300 transform hover:scale-105">
+                            Solicitar Orçamento
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Veículo 2 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg car-card executive" data-category="executive">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="https://images.unsplash.com/photo-1553440569-bcc63803a83d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1425&q=80" 
+                             alt="Mercedes-Benz S-Class Executivo" class="w-full h-full object-cover transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
+                        <div class="absolute bottom-0 left-0 p-6 text-white">
+                            <span class="bg-gold text-xs font-bold px-3 py-1 rounded-full mb-2 inline-block">Escolha Executiva</span>
+                            <h3 class="text-2xl font-heading font-bold">Mercedes-Benz S-Class</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <span class="text-gray-600"><i class="fas fa-users text-gold mr-2"></i> 3 passageiros</span>
+                            </div>
+                            <div class="text-gold font-bold text-xl">A partir de R$ 450</div>
+                        </div>
+                        <p class="text-gray-700 mb-4">
+                            O ápice do luxo corporativo com bancos massageadores, iluminação ambiente e pacote de privacidade. Ideal para traslados e reuniões.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="bg-gray-100 text-gray-800 text-xs px-3 py-1 rounded-full">Wi-Fi</span>
+                            <span class="bg-gray-100 text-gray-800 text-xs px-3 py-1 rounded-full">Escritório Móvel</span>
+                            <span class="bg-gray-100 text-gray-800 text-xs px-3 py-1 rounded-full">Vidros Escurecidos</span>
+                        </div>
+                        <a href="https://wa.me/5511999999999?text=Olá!%20Tenho%20interesse%20no%20Mercedes-Benz%20S-Class%20para%20meu%20evento%20em%20[data]." 
+                           class="block text-center bg-gold hover:bg-gold-700 text-white font-bold py-3 px-6 rounded-full transition-all duration-300 transform hover:scale-105">
+                            Solicitar Orçamento
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Veículo 3 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg car-card event" data-category="event">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="https://images.unsplash.com/photo-1549318581-ec37ba9f2414?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                             alt="Bentley Continental GT Branco" class="w-full h-full object-cover transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
+                        <div class="absolute bottom-0 left-0 p-6 text-white">
+                            <span class="bg-gold text-xs font-bold px-3 py-1 rounded-full mb-2 inline-block">Especial para Eventos</span>
+                            <h3 class="text-2xl font-heading font-bold">Bentley Continental GT</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <span class="text-gray-600"><i class="fas fa-users text-gold mr-2"></i> 4 passageiros</span>
+                            </div>
+                            <div class="text-gold font-bold text-xl">A partir de R$ 650</div>
+                        </div>
+                        <p class="text-gray-700 mb-4">
+                            O equilíbrio perfeito entre desempenho e luxo para eventos de gala. Inclui sistema de áudio Naim e bancos em couro matelassê.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="bg-gray-100 text-gray-800 text-xs px-3 py-1 rounded-full">Serviço Tapete Vermelho</span>
+                            <span class="bg-gray-100 text-gray-800 text-xs px-3 py-1 rounded-full">Coordenação de Imprensa</span>
+                            <span class="bg-gray-100 text-gray-800 text-xs px-3 py-1 rounded-full">Horário de Evento</span>
+                        </div>
+                        <a href="https://wa.me/5511999999999?text=Olá!%20Tenho%20interesse%20no%20Bentley%20Continental%20GT%20para%20meu%20evento%20em%20[data]." 
+                           class="block text-center bg-gold hover:bg-gold-700 text-white font-bold py-3 px-6 rounded-full transition-all duration-300 transform hover:scale-105">
+                            Solicitar Orçamento
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Veículo 4 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg car-card wedding" data-category="wedding">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="https://images.unsplash.com/photo-1601362840469-51e4d8d58785?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                             alt="Carro de Casamento Vintage" class="w-full h-full object-cover transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
+                        <div class="absolute bottom-0 left-0 p-6 text-white">
+                            <span class="bg-gold text-xs font-bold px-3 py-1 rounded-full mb-2 inline-block">Charme Retrô</span>
+                            <h3 class="text-2xl font-heading font-bold">Chevrolet Bel Air 1957</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <span class="text-gray-600"><i class="fas fa-users text-gold mr-2"></i> 5 passageiros</span>
+                            </div>
+                            <div class="text-gold font-bold text-xl">A partir de R$ 600</div>
+                        </div>
+                        <p class="text-gray-700 mb-4">
+                            Para casais que buscam charme vintage com confiabilidade moderna. Pneus faixa branca, aletas icônicas e interior clássico perfeito para fotos.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="bg-gray-100 text-gray-800 text-xs px-3 py-1 rounded-full">Estilo Retrô</span>
+                            <span class="bg-gray-100 text-gray-800 text-xs px-3 py-1 rounded-full">Cenário para Fotos</span>
+                            <span class="bg-gray-100 text-gray-800 text-xs px-3 py-1 rounded-full">Experiência Clássica</span>
+                        </div>
+                        <a href="https://wa.me/5511999999999?text=Olá!%20Tenho%20interesse%20no%20Chevrolet%20Bel%20Air%201957%20para%20meu%20evento%20em%20[data]." 
+                           class="block text-center bg-gold hover:bg-gold-700 text-white font-bold py-3 px-6 rounded-full transition-all duration-300 transform hover:scale-105">
+                            Solicitar Orçamento
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Veículo 5 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg car-card production" data-category="production">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="https://images.unsplash.com/photo-1494972308805-463bc619d34e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1473&q=80" 
+                             alt="Range Rover Preta para Produção" class="w-full h-full object-cover transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
+                        <div class="absolute bottom-0 left-0 p-6 text-white">
+                            <span class="bg-gold text-xs font-bold px-3 py-1 rounded-full mb-2 inline-block">Produção de Filmes</span>
+                            <h3 class="text-2xl font-heading font-bold">Range Rover SVAutobiography</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <span class="text-gray-600"><i class="fas fa-users text-gold mr-2"></i> 4 passageiros</span>
+                            </div>
+                            <div class="text-gold font-bold text-xl">A partir de R$ 550</div>
+                        </div>
+                        <p class="text-gray-700 mb-4">
+                            O veículo definitivo para produções, com iluminação interna configurável, amplo espaço para equipamentos e luxo robusto para locações.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="bg-gray-100 text-gray-800 text-xs px-3 py-1 rounded-full">Longos Períodos Ligado</span>
+                            <span class="bg-gray-100 text-gray-800 text-xs px-3 py-1 rounded-full">Amigável para Produção</span>
+                            <span class="bg-gray-100 text-gray-800 text-xs px-3 py-1 rounded-full">Pronto para Locação</span>
+                        </div>
+                        <a href="https://wa.me/5511999999999?text=Olá!%20Tenho%20interesse%20no%20Range%20Rover%20SVAutobiography%20para%20minha%20produção%20em%20[data]." 
+                           class="block text-center bg-gold hover:bg-gold-700 text-white font-bold py-3 px-6 rounded-full transition-all duration-300 transform hover:scale-105">
+                            Solicitar Orçamento
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Veículo 6 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg car-card executive" data-category="executive">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="https://images.unsplash.com/photo-1592841200221-1901a0355570?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                             alt="BMW Série 7 Executivo" class="w-full h-full object-cover transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
+                        <div class="absolute bottom-0 left-0 p-6 text-white">
+                            <span class="bg-gold text-xs font-bold px-3 py-1 rounded-full mb-2 inline-block">Escolha Corporativa</span>
+                            <h3 class="text-2xl font-heading font-bold">BMW Série 7</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <span class="text-gray-600"><i class="fas fa-users text-gold mr-2"></i> 3 passageiros</span>
+                            </div>
+                            <div class="text-gold font-bold text-xl">A partir de R$ 400</div>
+                        </div>
+                        <p class="text-gray-700 mb-4">
+                            Transporte executivo com controle por gestos, bancos traseiros reclináveis com massagem e seletor de cristal para clientes exigentes.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="bg-gray-100 text-gray-800 text-xs px-3 py-1 rounded-full">Pacote Executivo</span>
+                            <span class="bg-gray-100 text-gray-800 text-xs px-3 py-1 rounded-full">Suíte de Privacidade</span>
+                            <span class="bg-gray-100 text-gray-800 text-xs px-3 py-1 rounded-full">Pronto para Aeroporto</span>
+                        </div>
+                        <a href="https://wa.me/5511999999999?text=Olá!%20Tenho%20interesse%20no%20BMW%20Série%207%20para%20meu%20evento%20em%20[data]." 
+                           class="block text-center bg-gold hover:bg-gold-700 text-white font-bold py-3 px-6 rounded-full transition-all duration-300 transform hover:scale-105">
+                            Solicitar Orçamento
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-16">
+                <a href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20conversar%20sobre%20opções%20personalizadas%20de%20frota%20para%20meu%20evento." 
+                   class="inline-block bg-transparent border-2 border-gold text-gold hover:bg-gold hover:text-white font-bold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105">
+                    Precisa de uma solução personalizada? Fale conosco
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos -->
+    <section class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-heading font-bold text-center text-midnight mb-16">
+                O que dizem nossos clientes
+            </h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Depoimento 1 -->
+                <div class="bg-white p-8 rounded-lg shadow-md relative testimonial-card">
+                    <div class="absolute -top-6 -left-6 text-gold text-6xl opacity-30">“</div>
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 rounded-full bg-gold flex items-center justify-center text-white text-xl mr-4">
+                            💍
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-midnight">Camila & Rafael</h4>
+                            <p class="text-gray-600 text-sm">Casamento em São Paulo</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6 testimonial-quote transition-all duration-300">
+                        "Nos sentimos como realeza. O carro não foi apenas transporte — fez parte da cerimônia. Nosso motorista coordenou perfeitamente com o fotógrafo para capturar fotos incríveis da chegada."
+                    </p>
+                    <div class="flex">
+                        <i class="fas fa-star text-gold"></i>
+                        <i class="fas fa-star text-gold"></i>
+                        <i class="fas fa-star text-gold"></i>
+                        <i class="fas fa-star text-gold"></i>
+                        <i class="fas fa-star text-gold"></i>
+                    </div>
+                </div>
+                
+                <!-- Depoimento 2 -->
+                <div class="bg-white p-8 rounded-lg shadow-md relative testimonial-card">
+                    <div class="absolute -top-6 -left-6 text-gold text-6xl opacity-30">“</div>
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 rounded-full bg-gold flex items-center justify-center text-white text-xl mr-4">
+                            💼
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-midnight">EA para CEO</h4>
+                            <p class="text-gray-600 text-sm">Global Holdings</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6 testimonial-quote transition-all duration-300">
+                        "Os membros do conselho ficaram extremamente impressionados — e chegaram pontualmente a todas as reuniões, mesmo com agendas apertadas. O profissionalismo discreto da LuxeRide facilitou muito meu trabalho."
+                    </p>
+                    <div class="flex">
+                        <i class="fas fa-star text-gold"></i>
+                        <i class="fas fa-star text-gold"></i>
+                        <i class="fas fa-star text-gold"></i>
+                        <i class="fas fa-star text-gold"></i>
+                        <i class="fas fa-star text-gold"></i>
+                    </div>
+                </div>
+                
+                <!-- Depoimento 3 -->
+                <div class="bg-white p-8 rounded-lg shadow-md relative testimonial-card">
+                    <div class="absolute -top-6 -left-6 text-gold text-6xl opacity-30">“</div>
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 rounded-full bg-gold flex items-center justify-center text-white text-xl mr-4">
+                            🎬
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-midnight">Gerente de Produção</h4>
+                            <p class="text-gray-600 text-sm">Fashion Week</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6 testimonial-quote transition-all duration-300">
+                        "Para as chegadas do nosso desfile de moda, precisávamos de veículos que combinassem com a estética da marca. A LuxeRide superou as expectativas, até ajustando a iluminação interna para nossa paleta de cores."
+                    </p>
+                    <div class="flex">
+                        <i class="fas fa-star text-gold"></i>
+                        <i class="fas fa-star text-gold"></i>
+                        <i class="fas fa-star text-gold"></i>
+                        <i class="fas fa-star text-gold"></i>
+                        <i class="fas fa-star text-gold"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre a Marca -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="relative h-64 rounded-lg overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                                 alt="Motorista profissional" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-30"></div>
+                            <div class="absolute bottom-0 left-0 p-4 text-white">
+                                <h4 class="font-bold">Equipe Profissional</h4>
+                            </div>
+                        </div>
+                        <div class="relative h-64 rounded-lg overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                                 alt="Manutenção de carro de luxo" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-30"></div>
+                            <div class="absolute bottom-0 left-0 p-4 text-white">
+                                <h4 class="font-bold">Cuidado Meticuloso</h4>
+                            </div>
+                        </div>
+                        <div class="relative h-64 rounded-lg overflow-hidden col-span-2">
+                            <img src="https://images.unsplash.com/photo-1519671488599-0f971f15e0b8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                                 alt="Serviço de carro para casamento" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-30"></div>
+                            <div class="absolute bottom-0 left-0 p-4 text-white">
+                                <h4 class="font-bold">Momentos Inesquecíveis</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl md:text-4xl font-heading font-bold text-midnight mb-6">
+                        Por trás da marca
+                    </h2>
+                    <p class="text-lg text-gray-700 mb-6">
+                        Fundada com paixão por serviço excepcional, a LuxeRide reúne motoristas experientes, estilistas de casamento e planejadores de logística para garantir que cada viagem entregue beleza, confiabilidade e elegância.
+                    </p>
+                    <p class="text-lg text-gray-700 mb-8">
+                        Nossa equipe passa por rigoroso treinamento em hospitalidade, coordenação de eventos e direção defensiva. Não somos apenas motoristas — somos parceiros na criação de experiências inesquecíveis.
+                    </p>
+                    
+                    <div class="mb-8">
+                        <h3 class="text-xl font-heading font-bold text-midnight mb-4">Nossas Certificações</h3>
+                        <div class="flex flex-wrap gap-4">
+                            <div class="bg-gray-100 p-4 rounded-lg flex items-center">
+                                <img src="https://via.placeholder.com/50x50" alt="DETRAN SP" class="w-10 h-10 mr-3">
+                                <span class="font-bold">Licenciados pelo DETRAN SP</span>
+                            </div>
+                            <div class="bg-gray-100 p-4 rounded-lg flex items-center">
+                                <img src="https://via.placeholder.com/50x50" alt="Hotel Fasano" class="w-10 h-10 mr-3">
+                                <span class="font-bold">Fornecedor preferencial no Hotel Fasano</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="#contact" class="inline-block bg-gold hover:bg-gold-700 text-white font-bold py-3 px-6 rounded-full transition-all duration-300 transform hover:scale-105">
+                        Conheça nossa equipe
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Blog -->
+    <section class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-heading font-bold text-center text-midnight mb-4">
+                O Journal LuxeRide
+            </h2>
+            <p class="text-xl text-center text-gray-600 mb-12 max-w-3xl mx-auto">
+                Dicas sobre transporte de luxo, planejamento de eventos e como criar momentos inesquecíveis.
+            </p>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Artigo 1 -->
+                <article class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                             alt="Poses com carro de casamento" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+                    </div>
+                    <div class="p-6">
+                        <span class="text-gold text-sm font-bold">Dicas de Casamento</span>
+                        <h3 class="text-xl font-heading font-bold text-midnight my-3">
+                            7 Poses com Carro de Casamento que Você Vai Querer Registrar
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            Oportunidades de fotos essenciais com seu carro de casamento que muitos casais deixam passar, mas vão valorizar para sempre.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500">15 de junho de 2023</span>
+                            <a href="#" class="text-gold font-bold hover:underline">Leia Mais</a>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Artigo 2 -->
+                <article class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                             alt="Carro para evento corporativo" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+                    </div>
+                    <div class="p-6">
+                        <span class="text-gold text-sm font-bold">Eventos Corporativos</span>
+                        <h3 class="text-xl font-heading font-bold text-midnight my-3">
+                            Como Veículos de Luxo Valorizam Eventos Corporativos
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            A psicologia da chegada e por que sua escolha de transporte impacta a percepção e os resultados do negócio.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500">28 de maio de 2023</span>
+                            <a href="#" class="text-gold font-bold hover:underline">Leia Mais</a>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Artigo 3 -->
+                <article class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1549318581-ec37ba9f2414?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                             alt="Chegada no tapete vermelho" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+                    </div>
+                    <div class="p-6">
+                        <span class="text-gold text-sm font-bold">Planejamento de Eventos</span>
+                        <h3 class="text-xl font-heading font-bold text-midnight my-3">
+                            Como Planejar uma Chegada de Tapete Vermelho: Os Detalhes que Fazem Diferença
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            Do horário à escolha do veículo, como orquestrar um momento de tapete vermelho impecável que chama atenção.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500">12 de abril de 2023</span>
+                            <a href="#" class="text-gold font-bold hover:underline">Leia Mais</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-block bg-transparent border-2 border-gold text-gold hover:bg-gold hover:text-white font-bold py-3 px-6 rounded-full transition-all duration-300 transform hover:scale-105">
+                    Ver Todos os Artigos
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Contato -->
+    <section id="contact" class="py-20 bg-midnight text-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <h2 class="text-3xl md:text-4xl font-heading font-bold text-gold mb-6">
+                        Pronto para Elevar Seu Evento?
+                    </h2>
+                    <p class="text-xl mb-8">
+                        Fale com nosso time de concierge para discutir suas necessidades e receber um orçamento personalizado.
+                    </p>
+                    
+                    <div class="mb-8">
+                        <div class="flex items-start mb-6">
+                            <div class="text-gold text-2xl mr-4 mt-1">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-xl mb-1">Telefone</h3>
+                                <p class="text-gray-300">+55 11 99999-9999</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start mb-6">
+                            <div class="text-gold text-2xl mr-4 mt-1">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-xl mb-1">E-mail</h3>
+                                <p class="text-gray-300">concierge@luxeride.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="text-gold text-2xl mr-4 mt-1">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-xl mb-1">Endereço</h3>
+                                <p class="text-gray-300">Av. Paulista, 1000 - São Paulo, SP</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 class="font-bold text-xl mb-4">Siga-nos</h3>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-white hover:text-gold text-2xl"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="text-white hover:text-gold text-2xl"><i class="fab fa-facebook"></i></a>
+                            <a href="#" class="text-white hover:text-gold text-2xl"><i class="fab fa-pinterest"></i></a>
+                            <a href="#" class="text-white hover:text-gold text-2xl"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <form class="bg-jet p-8 rounded-lg">
+                        <h3 class="text-2xl font-heading font-bold text-gold mb-6">Envie uma Mensagem</h3>
+                        
+                        <div class="mb-6">
+                            <label for="name" class="block text-gray-300 mb-2">Seu Nome</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-gold text-white">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="email" class="block text-gray-300 mb-2">E-mail</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-gold text-white">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="phone" class="block text-gray-300 mb-2">Telefone</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-gold text-white">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="service" class="block text-gray-300 mb-2">Serviço de Interesse</label>
+                            <select id="service" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-gold text-white">
+                                <option value="">Selecione um serviço</option>
+                                <option value="wedding">Transporte para Casamento</option>
+                                <option value="executive">Traslados Executivos</option>
+                                <option value="event">Transporte para Eventos</option>
+                                <option value="production">Produção de Filmes</option>
+                                <option value="other">Outro</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-300 mb-2">Sua Mensagem</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-gold text-white"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-gold hover:bg-gold-700 text-white font-bold py-4 px-6 rounded-full transition-all duration-300 transform hover:scale-105">
+                            Enviar Mensagem
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between mb-12">
+                <div class="mb-8 md:mb-0">
+                    <a href="#" class="text-2xl font-heading font-bold text-gold mb-4 inline-block">Luxe<span class="text-white">Ride</span></a>
+                    <p class="text-gray-400 max-w-xs">
+                        Serviços premium de motorista para casamentos, eventos corporativos e transporte VIP em São Paulo.
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+                    <div>
+                        <h3 class="text-gold font-bold text-lg mb-4">Serviços</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-gold">Carros para Casamento</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-gold">Traslados Executivos</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-gold">Transporte para Eventos</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-gold">Produção de Filmes</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-gold font-bold text-lg mb-4">Empresa</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-gold">Sobre Nós</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-gold">Nossa Frota</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-gold">Depoimentos</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-gold">Blog</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-gold font-bold text-lg mb-4">Legal</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-gold">Política de Privacidade</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-gold">Termos de Serviço</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-gold">Política de Cancelamento</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-gold">Licenças</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-gray-800">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 mb-4 md:mb-0">
+                        &copy; 2023 LuxeRide. Todos os direitos reservados.
+                    </p>
+                    
+                    <div class="flex space-x-6">
+                        <img src="https://via.placeholder.com/100x40" alt="Certificado DETRAN" class="h-8">
+                        <img src="https://via.placeholder.com/100x40" alt="Turismo São Paulo" class="h-8">
+                        <img src="https://via.placeholder.com/100x40" alt="Associação de Viagens de Luxo" class="h-8">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Header Scroll Effect
+        const header = document.getElementById('header');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.classList.add('bg-midnight', 'shadow-lg');
+                header.classList.remove('bg-transparent');
+            } else {
+                header.classList.add('bg-transparent');
+                header.classList.remove('bg-midnight', 'shadow-lg');
+            }
+        });
+        
+        // Fleet Filter
+        const fleetFilters = document.querySelectorAll('.fleet-filter');
+        const carCards = document.querySelectorAll('.car-card');
+        
+        fleetFilters.forEach(filter => {
+            filter.addEventListener('click', () => {
+                // Remove active class from all filters
+                fleetFilters.forEach(f => f.classList.remove('active', 'bg-gold', 'text-white'));
+                filter.classList.add('active', 'bg-gold', 'text-white');
+                
+                const filterValue = filter.getAttribute('data-filter');
+                
+                carCards.forEach(card => {
+                    if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+        
+        // Smooth Scrolling for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+        
+        // Initialize header on load
+        window.addEventListener('load', () => {
+            if (window.scrollY > 100) {
+                header.classList.add('bg-midnight', 'shadow-lg');
+                header.classList.remove('bg-transparent');
+            }
+        });
+    </script>
+</body>
+</html>
